@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Album</title>
+    <link rel="stylesheet" href="temples.css">
+    <link rel="stylesheet" href="temples-large.css">
+    <link rel="stylesheet" href="menu.css"> <!-- Estilo para o menu hamburguer -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Picture Album</h1>
+        </div>
+        <nav id="main-nav">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()"> <!-- Botão do hamburguer -->
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    
+    <main>
+        <h2>Home</h2>
+        <section class="gallery">
+            <figure>
+                <img src="images/TemploRecife.jpg" alt="Recife Temple">
+                <figcaption>Recife Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/TemploBelém.jpg" alt="Belém Temple">
+                <figcaption>Belém Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/TemploCampinas.jpg" alt="Campinas Temple">
+                <figcaption>Campinas Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/TemploNatal.jpg" alt="Natal Temple">
+                <figcaption>Natal Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/TemploPortoAlegre.jpg" alt="Porto Alegre Temple">
+                <figcaption>Porto Alegre Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/TemploRio.jpg" alt="Rio Temple">
+                <figcaption>Rio Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/TemploSaltLake.jpg" alt="Salt Lake Temple">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/TemploSanDiego.jpg" alt="San Diego Temple">
+                <figcaption>San Diego Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/TemploSaoPaulo.jpg" alt="Sao Paulo Temple">
+                <figcaption>Sao Paulo Temple</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> David Vieira, João Pessoa, Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="temples.js" defer></script>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("main-nav");
+            nav.classList.toggle("active");
+        }
+
+        // Definindo o ano atual no footer
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentyear').textContent = currentYear;
+
+        // Exibindo a data da última modificação
+        const lastModified = document.lastModified;
+        document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
