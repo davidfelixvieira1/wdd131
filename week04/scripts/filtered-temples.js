@@ -60,7 +60,7 @@ const temples = [
         location: "Provo, Utah, United States",
         dedicated: "2016, March, 20",
         area: 85000,
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3t6QxB6sevhYmIh6SCv2VqT6KH1oQJHJ2Sg&usqp=CAU"
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkyw_BTyO-YWBm8Wf0p7FeqpERFjLTLp7AiA&s"
     }
 ];
 
