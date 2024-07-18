@@ -7,67 +7,73 @@ body {
 
 header {
     background-color: #333;
-    color: #fff;
-    padding: 1em 0;
+    color: white;
+    padding: 1rem 0;
 }
 
-header nav ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
-header nav ul li {
-    margin: 0 1em;
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
 }
 
-header nav ul li a {
-    color: #fff;
+nav ul li a {
+    color: white;
     text-decoration: none;
 }
 
-main {
-    padding: 2em;
-}
-
-#temple-cards {
+.temple-cards-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
     justify-content: center;
+    padding: 1rem;
 }
 
 .temple-card {
     border: 1px solid #ccc;
     border-radius: 8px;
+    margin: 1rem;
+    width: 300px;
     overflow: hidden;
-    width: 300px; /* Fixed width for uniformity */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
 .temple-card img {
     width: 100%;
-    height: 200px; /* Adjust this height to your preference */
-    object-fit: cover; /* Ensures the image covers the specified dimensions */
-    display: block;
+    height: 200px;
+    object-fit: cover;
 }
 
-.temple-card .temple-info {
-    padding: 1em;
-    background-color: #f9f9f9;
+.temple-card:hover {
+    transform: scale(1.05);
+}
+
+.temple-info {
+    padding: 1rem;
+}
+
+.temple-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.temple-info p {
+    margin: 0.5rem 0;
 }
 
 footer {
     text-align: center;
-    padding: 1em 0;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem;
+    background-color: #f1f1f1;
 }
+
 
 
 

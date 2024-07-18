@@ -61,6 +61,13 @@ const temples = [
         dedicated: "2016, March, 20",
         area: 85000,
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkyw_BTyO-YWBm8Wf0p7FeqpERFjLTLp7AiA&s"
+    },
+    {
+        templeName: "Tokyo Japan",
+        location: "Tokyo, Japan",
+        dedicated: "1980, October, 27",
+        area: 52693,
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EV17WaX9JAh-JTaJJtArVoKTA97KCoQdtg&s"
     }
 ];
 
@@ -102,6 +109,7 @@ renderTemples();
 // Set current year and last modified date
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
+
 
 
 
