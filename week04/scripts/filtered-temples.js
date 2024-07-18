@@ -60,22 +60,14 @@ const temples = [
         location: "Provo, Utah, United States",
         dedicated: "2016, March, 20",
         area: 85000,
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkyw_BTyO-YWBm8Wf0p7FeqpERFjLTLp7AiA&s"
-    },
-    {
-        templeName: "Tokyo Japan",
-        location: "Tokyo, Japan",
-        dedicated: "1980, October, 27",
-        area: 52693,
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EV17WaX9JAh-JTaJJtArVoKTA97KCoQdtg&s"
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3t6QxB6sevhYmIh6SCv2VqT6KH1oQJHJ2Sg&usqp=CAU"
     }
 ];
 
-// Function to create temple card HTML
 const createTempleCard = (temple) => {
     return `
         <div class="temple-card">
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+            <img src="${temple.imageUrl}" alt="${temple.templeName}">
             <div class="temple-info">
                 <h2>${temple.templeName}</h2>
                 <p><strong>Location:</strong> ${temple.location}</p>
@@ -86,25 +78,31 @@ const createTempleCard = (temple) => {
     `;
 };
 
-// Function to display temples based on filter
-const displayTemples = (filterFn = () => true) => {
+const renderTemples = (filterFunction = null) => {
     const templeCardsContainer = document.getElementById('temple-cards');
-    templeCardsContainer.innerHTML = temples.filter(filterFn).map(createTempleCard).join('');
+    templeCardsContainer.innerHTML = ''; // Clear previous cards
+
+    const filteredTemples = filterFunction ? temples.filter(filterFunction) : temples;
+
+    filteredTemples.forEach(temple => {
+        templeCardsContainer.innerHTML += createTempleCard(temple);
+    });
 };
 
-// Event listeners for navigation links
-document.getElementById('home').addEventListener('click', () => displayTemples());
-document.getElementById('old').addEventListener('click', () => displayTemples(temple => new Date(temple.dedicated).getFullYear() < 1900));
-document.getElementById('new').addEventListener('click', () => displayTemples(temple => new Date(temple.dedicated).getFullYear() > 2000));
-document.getElementById('large').addEventListener('click', () => displayTemples(temple => temple.area > 90000));
-document.getElementById('small').addEventListener('click', () => displayTemples(temple => temple.area < 10000));
+// Event listeners for filter buttons
+document.getElementById('home').addEventListener('click', () => renderTemples());
+document.getElementById('old').addEventListener('click', () => renderTemples(temple => new Date(temple.dedicated) < new Date('2000-01-01')));
+document.getElementById('new').addEventListener('click', () => renderTemples(temple => new Date(temple.dedicated) >= new Date('2000-01-01')));
+document.getElementById('large').addEventListener('click', () => renderTemples(temple => temple.area > 30000));
+document.getElementById('small').addEventListener('click', () => renderTemples(temple => temple.area <= 30000));
 
-// Set footer year and last modified date
+// Render all temples on initial load
+renderTemples();
+
+// Set current year and last modified date
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
-// Initial display of all temples
-displayTemples();
 
 
 
