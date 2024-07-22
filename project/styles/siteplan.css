@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    color: #004080;
+}
+
+.color-sample {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.color-blue {
+    background-color: #004080;
+}
+
+.color-light-blue {
+    background-color: #80c1ff;
+}
+
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+}
