@@ -1,9 +1,11 @@
+/* Default (light) theme styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
 }
 
 header {
@@ -45,17 +47,17 @@ main {
     border-radius: 8px;
 }
 
-/* Estilo para as imagens nas páginas de conteúdo */
+/* Styling for images on content pages */
 .page-image {
-    display: block;        /* Garante que a imagem seja tratada como bloco */
-    margin: 20px auto;     /* Adiciona margem automática e define 20px de margem superior e inferior */
-    max-width: 300px;       /* Garante que a imagem não exceda a largura da tela */
-    height: auto;          /* Mantém a proporção da imagem */
+    display: block;        /* Ensures the image is treated as a block */
+    margin: 20px auto;     /* Adds automatic margin and sets 20px margin top and bottom */
+    max-width: 300px;      /* Ensures the image does not exceed the width of the screen */
+    height: auto;          /* Maintains the image aspect ratio */
 }
 
-/* Ajusta a margem superior para a imagem se estiver logo abaixo do menu */
+/* Adjusts top margin for the image if it's right below the menu */
 header + main .page-image {
-    margin-top: 10px;      /* Define uma margem superior para separar a imagem do menu */
+    margin-top: 10px;      /* Sets a top margin to separate the image from the menu */
 }
 
 footer {
@@ -66,4 +68,28 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme header {
+    background-color: #004080;
+    color: white;
+}
+
+.dark-theme .hero, .dark-theme .content, .dark-theme .details, .dark-theme .future {
+    background-color: #0056b3; /* Darker blue for dark theme */
+}
+
+.dark-theme footer {
+    background-color: #004080;
+    color: white;
+}
+
+.dark-theme .page-image {
+    border: 2px solid #ffffff; /* Optional: Adds a border to images in dark theme */
 }
