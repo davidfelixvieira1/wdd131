@@ -34,7 +34,7 @@ input[type="text"],
 input[type="date"],
 textarea,
 select {
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Changed from 20px to 10px */
     padding: 10px;
     font-size: 1em;
     border: 1px solid #ccc;
@@ -43,7 +43,7 @@ select {
 
 input[type="submit"] {
     padding: 10px;
-    font-size: 1em;
+    font-size: 1.5em;
     color: white;
     background-color: #004080;
     border: none;
@@ -55,6 +55,30 @@ input[type="submit"]:hover {
     background-color: #003060;
 }
 
-div {
-    margin-bottom: 20px;
+.checkbox-group {
+    display: block;
+    font-size: .9rem;
+    margin-bottom: 10px; /* Added to ensure spacing between sections */
 }
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+    vertical-align: middle;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px; /* Space between each checkbox item */
+}
+
+.optional {
+    color: blue;
+    font-style: italic;
+    margin-left: 5px; /* Ensures space between field label and (Optional) text */
+}
+.rating-section {
+    margin-bottom: 10px; /* Espaço entre a seção de avaliação e a data de instalação */
+}
+
+
+
